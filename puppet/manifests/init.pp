@@ -10,9 +10,12 @@ Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin"
 class { 'git::install': }
 class { 'subversion::install': }
 class { 'apache2::install': }
-class { 'php5::install': }
-class { 'mysql::install': }
+#class { 'php5::install': }
+class { 'php7::install': }
+class { 'mariadb::install': }
 class { 'wordpress::install': }
 class { 'phpmyadmin::install': }
 class { 'composer::install': }
-class { 'phpqa::install': }
+#class { 'phpqa::install': }
+class { 'tests::install': }
+class { 'wpcli::install': }
